@@ -1,0 +1,15 @@
+{
+  "$comment": "Cursor Hooks。スクリプト本体(.cursor/hooks/*.sh)は環境に合わせて自作する。終了コード 0=成功 / 2=ブロック。",
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      { "command": "./.cursor/hooks/format.sh" }
+    ],
+    "beforeShellExecution": [
+      { "command": "./.cursor/hooks/audit.sh", "timeout": 30, "matcher": "rm|curl|git push --force" }
+    ],
+    "beforeSubmitPrompt": [
+      { "command": "./.cursor/hooks/scan-secrets.sh", "failClosed": true }
+    ]
+  }
+}

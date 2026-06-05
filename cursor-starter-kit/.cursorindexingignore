@@ -1,0 +1,12 @@
+# .cursorindexingignore — 検索インデックスからのみ除外する
+# （AI からはアクセス可能なまま。巨大な生成物を検索精度のために外す用途）
+# 構文は .gitignore と同じ。
+
+dist/
+build/
+coverage/
+.next/
+public/generated/
+**/*.min.js
+**/*.map
+**/snapshots/

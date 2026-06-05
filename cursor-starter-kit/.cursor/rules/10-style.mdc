@@ -1,0 +1,13 @@
+---
+globs: src/**/*.tsx
+alwaysApply: false
+---
+
+# React / Component Rules (Auto Attached)
+- Use named exports only (no default exports).
+- One component per file; filename matches the component name.
+- Props typed with an explicit `interface`, not inline types.
+- No business logic in components — extract to hooks under `src/hooks/`.
+- Keep components under 200 lines; split into subcomponents when larger.
+- Prefer composition over prop drilling.
+- Co-locate component styles; do not use inline style objects.

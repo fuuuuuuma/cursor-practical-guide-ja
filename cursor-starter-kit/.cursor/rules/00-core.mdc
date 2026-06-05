@@ -1,0 +1,18 @@
+---
+alwaysApply: true
+---
+
+# Tech Stack（書き換えてください）
+- Language: TypeScript (strict). No `any` unless justified with a comment.
+- Framework: Next.js 15 (App Router). Server Components by default.
+- Styling: Tailwind CSS. No inline style objects.
+- Package manager: pnpm. Never suggest npm or yarn commands.
+- Testing: Vitest + React Testing Library.
+
+# General
+- Read existing files before editing. Match the surrounding style.
+- Never invent APIs or config keys. If unsure, say so and ask.
+- Make small, focused changes. One concern per change.
+- Do not fix bugs by guessing — explain the root cause in one sentence first.
+
+# Keep this file under ~200 words to avoid loading a token tax on every request.

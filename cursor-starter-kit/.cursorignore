@@ -1,0 +1,28 @@
+# .cursorignore — 記載ファイルへの AI アクセスを全般ブロックする
+# （セマンティック検索 / Tab / Agent / Inline Edit / @ 参照）
+# 構文は .gitignore と同じ（* ** ? ! #）。
+# 注意: Terminal と MCP サーバー経由はこの制限をバイパスする。
+
+# --- secrets（最優先） ---
+**/.env*
+**/credentials.json
+**/secrets.*
+**/*.key
+**/*.pem
+**/*.p12
+
+# --- build artifacts / deps ---
+dist/
+build/
+.next/
+out/
+node_modules/
+.venv/
+
+# --- logs / tmp ---
+*.log
+**/logs/
+tmp/
+
+# 例: 特定のフォルダだけは許可したい場合は ! で再包含
+# !app/

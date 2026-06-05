@@ -1,0 +1,22 @@
+{
+  "$comment": "MCPサーバー設定。使うものだけ残す。APIキーは ${env:VAR} で渡し、実キーは絶対に書かない。グローバルは ~/.cursor/mcp.json。",
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}"
+      }
+    },
+    "remote-example": {
+      "url": "https://api.example.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:MY_TOKEN}"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+---
+description: Project structure and where new files must go
+alwaysApply: false
+---
+
+# File Organization (Agent Requested)
+- API routes: `src/app/api/<resource>/route.ts`
+- Shared types: `src/types/` (one file per domain).
+- DB access only inside `src/server/db/` — never import the DB client into components.
+- New service: place under `src/services/<name>/`, validate inputs at the boundary,
+  return `{ code, message }` style errors (never throw raw strings).
+- Utilities: `src/lib/`. Keep them pure and unit-tested.
+- Before creating a file, check if a similar one already exists and extend it.
